@@ -1,0 +1,41 @@
+# Go build artifacts
+/bin/
+/build/
+/dist/
+*.exe
+*.test
+*.out
+
+# Go tools
+coverage.out
+*.coverprofile
+*.testresult
+
+# Dependency directories (when using vendoring)
+vendor/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+
+# Logs and temp files
+*.log
+*.tmp
+*.cache
+.DS_Store
+
+# Env files (you can version `.env.example` if needed)
+.env
+.env.local
+.env.*
+
+# HTTP client plugin files
+*.http.history
+
+# OS files
+Thumbs.db
+
+# go debug files
+*.dlv
+__debug*
