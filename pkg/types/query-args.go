@@ -1,11 +1,13 @@
 package types
 
+type Filter map[string]any
+
 type QueryArgs struct {
 	Limit    int64  `json:"limit"`
 	Offset   int64  `json:"offset"`
 	SortBy   string `json:"sort_by"`
   Ascending bool   `json:"asc"`	
-	Filter map[string]any `json:"filter"`
+	Filter Filter `json:"filter"`
 }
 
 func (q *QueryArgs) CheckDefaults() {
@@ -19,6 +21,6 @@ func (q *QueryArgs) CheckDefaults() {
 		q.SortBy = "id"
 	}
 	if q.Filter == nil {
-		q.Filter = make(map[string]any)
+		q.Filter = make(Filter)
 	}
 }
